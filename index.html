@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Легенды об Охотниках</title>
 
 <style>
-
 body{
   margin:0;
   background:#050512;
@@ -17,135 +14,128 @@ body{
 }
 
 .container{
-  width:90%;
-  max-width:1400px;
+  width:92%;
+  max-width:1100px;
   margin:auto;
 }
 
 .hero{
   text-align:center;
-  padding:120px 20px 80px;
+  padding:70px 10px 45px;
 }
 
 .hero h1{
-  font-size:72px;
-  margin-bottom:20px;
-  color:#efe7ff;
+  font-size:56px;
+  margin:0 0 18px;
 }
 
 .hero p{
-  font-size:28px;
-  color:#cfc7e8;
-  max-width:900px;
+  font-size:22px;
+  line-height:1.45;
+  max-width:760px;
   margin:auto;
-  line-height:1.5;
+  color:#cfc7e8;
 }
 
 .menu{
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:14px;
   flex-wrap:wrap;
-  margin-top:50px;
+  margin-top:35px;
 }
 
 .menu a{
   text-decoration:none;
   color:#f2eaff;
   background:#171726;
-  padding:14px 24px;
-  border-radius:16px;
+  padding:12px 22px;
+  border-radius:14px;
   border:1px solid #2e2e48;
-  transition:0.3s;
   font-size:18px;
-}
-
-.menu a:hover{
-  background:#6d5cff;
 }
 
 .section-title{
   text-align:center;
-  font-size:64px;
-  margin:40px 0 70px;
+  font-size:44px;
+  margin:35px 0 35px;
 }
 
 .series-grid{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
-  gap:40px;
-  margin-bottom:100px;
+  gap:22px 28px;
+  margin-bottom:60px;
 }
 
 .series-banner h3{
-  color:#f2eaff;
-  font-size:42px;
-  margin-bottom:18px;
-}
-
-.series-banner a{
-  text-decoration:none;
+  font-size:30px;
+  margin:0 0 10px;
 }
 
 .series-banner img{
   width:100%;
-  height:180px;
+  height:120px;
   object-fit:cover;
   object-position:center;
-  border-radius:24px;
+  border-radius:18px;
   border:1px solid #353550;
-  box-shadow:0 10px 30px rgba(0,0,0,0.5);
-  transition:0.3s;
+  box-shadow:0 8px 22px rgba(0,0,0,0.45);
 }
 
-.series-banner img:hover{
-  transform:scale(1.02);
-  border-color:#8d7bff;
-}
-
-@media(max-width:900px){
+@media(max-width:700px){
+  .container{
+    width:90%;
+  }
 
   .hero{
-    padding:80px 10px 50px;
+    padding:55px 8px 35px;
   }
 
   .hero h1{
-    font-size:42px;
+    font-size:40px;
   }
 
   .hero p{
-    font-size:22px;
+    font-size:18px;
   }
 
-   .menu a{
-    gap:14px;
+  .menu{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
   }
-  
+
   .menu a{
     font-size:16px;
-    padding:12px 18px;
-    min-width:140px;
+    padding:12px 10px;
     text-align:center;
   }
 
+  .menu a:last-child{
+    grid-column:1 / 3;
+    width:45%;
+    margin:auto;
+  }
+
   .section-title{
-    font-size:42px;
+    font-size:38px;
+    margin:30px 0;
   }
 
   .series-grid{
     grid-template-columns:1fr;
-    gap:50px;
+    gap:32px;
   }
 
   .series-banner h3{
-    font-size:34px;
+    font-size:32px;
   }
 
   .series-banner img{
-    height:140px;
+    height:120px;
   }
 }
-
 </style>
 </head>
 
@@ -154,7 +144,6 @@ body{
 <div class="container">
 
   <section class="hero">
-
     <h1>Легенды об Охотниках</h1>
 
     <p>
@@ -169,7 +158,6 @@ body{
       <a href="#">Мир</a>
       <a href="#">Статьи</a>
     </div>
-
   </section>
 
   <h2 class="section-title">Серии книг</h2>
@@ -178,7 +166,6 @@ body{
 
     <div class="series-banner">
       <h3>Тёмные Охотники</h3>
-
       <a href="dark-hunters/">
         <img src="images/dark-hunters.jpg">
       </a>
@@ -186,7 +173,6 @@ body{
 
     <div class="series-banner">
       <h3>Хроники Ника</h3>
-
       <a href="chronicles-of-nick/">
         <img src="images/chronicles-nick.jpg">
       </a>
@@ -194,7 +180,6 @@ body{
 
     <div class="series-banner">
       <h3>Тени Огня</h3>
-
       <a href="shadows-of-fire/">
         <img src="images/shadows-fire.jpg">
       </a>
@@ -202,7 +187,6 @@ body{
 
     <div class="series-banner">
       <h3>Крест Мертвеца</h3>
-
       <a href="deadmans-cross/">
         <img src="images/deadmans-cross.jpg">
       </a>
