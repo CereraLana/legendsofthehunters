@@ -1,1 +1,131 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Персонажи</title>
+
+<style>
+
+body{
+  margin:0;
+  background:#0b0b12;
+  color:white;
+  font-family:Georgia, serif;
+  padding:40px;
+}
+
+h1{
+  text-align:center;
+  font-size:60px;
+  margin-bottom:60px;
+  color:#d8d8ff;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#171722;
+  border:1px solid #2a2a40;
+  border-radius:20px;
+  padding:25px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  background:#222233;
+}
+
+.card h2{
+  margin-top:0;
+  color:#ffffff;
+}
+
+.card p{
+  color:#b8b8c9;
+  line-height:1.6;
+}
+
+.button{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  background:#4d4d8f;
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+}
+
+.button:hover{
+  background:#6666aa;
+}
+
+.back{
+  display:inline-block;
+  margin-bottom:40px;
+  color:#aaaaff;
+  text-decoration:none;
+}
+
+.back:hover{
+  color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<a class="back" href="../index.html">
+← Главная
+</a>
+
+<h1>Персонажи</h1>
+
+<div class="grid">
+
+  <div class="card">
+    <h2>Ашерон</h2>
+
+    <p>
+      Один из самых древних и загадочных Темных Охотников.
+    </p>
+
+    <a class="button" href="#">
+      Читать
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>Ник Готье</h2>
+
+    <p>
+      Главный герой серии Chronicles of Nick.
+    </p>
+
+    <a class="button" href="#">
+      Читать
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>Талон</h2>
+
+    <p>
+      Кельтский Темный Охотник с трагическим прошлым.
+    </p>
+
+    <a class="button" href="#">
+      Читать
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>
