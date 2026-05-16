@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Тени Огня — Легенды об Охотниках</title>
+
+<style>
+body{
+  margin:0;
+  background:#050512;
+  color:#f2eaff;
+  font-family:Georgia, serif;
+}
+
+.container{
+  width:92%;
+  max-width:1200px;
+  margin:auto;
+  padding:35px 0 70px;
+}
+
+.back{
+  color:#cfc7ff;
+  text-decoration:none;
+  font-size:18px;
+}
+
+h1{
+  font-size:56px;
+  text-align:center;
+  margin:45px 0 15px;
+}
+
+.subtitle{
+  text-align:center;
+  color:#cfc7e8;
+  font-size:22px;
+  line-height:1.5;
+  max-width:800px;
+  margin:0 auto 55px;
+}
+
+.books-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:30px;
+}
+
+.book-card{
+  background:#151522;
+  border:1px solid #343454;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.45);
+}
+
+.book-card img{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  display:block;
+}
+
+.book-info{
+  padding:20px;
+}
+
+.number{
+  color:#9f94ff;
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.book-info h2{
+  font-size:24px;
+  margin:0 0 12px;
+}
+
+.status{
+  display:inline-block;
+  background:#2f815d;
+  color:white;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:14px;
+}
+
+.future{
+  background:#8a4d2c;
+}
+
+.note{
+  color:#c9c3d8;
+  line-height:1.5;
+  margin-top:14px;
+}
+
+@media(max-width:700px){
+  h1{
+    font-size:42px;
+  }
+
+  .subtitle{
+    font-size:18px;
+  }
+
+  .books-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+  }
+
+  .book-card img{
+    height:230px;
+  }
+
+  .book-info{
+    padding:14px;
+  }
+
+  .book-info h2{
+    font-size:18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a class="back" href="../">← Главная</a>
+
+  <h1>Тени Огня</h1>
+
+  <div class="subtitle">
+    Спин-офф «Хроник Ника». Книги расположены в хронологическом порядке.
+  </div>
+
+  <div class="books-grid">
+
+    <div class="book-card">
+      <img src="../images/sabotage.jpg" alt="Sabotage / Диверсия">
+      <div class="book-info">
+        <div class="number">Книга 1</div>
+        <h2>Sabotage / Диверсия</h2>
+        <span class="status">Завершён</span>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="../images/last-christmas.jpg" alt="Last Christmas / Последнее Рождество">
+      <div class="book-info">
+        <div class="number">Книга 1.5</div>
+        <h2>Last Christmas / Последнее Рождество</h2>
+        <span class="status">Завершён</span>
+        <div class="note">Калеб и Лиллиана</div>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="../images/savage.jpg" alt="Savage / Зверь">
+      <div class="book-info">
+        <div class="number">Книга 2</div>
+        <h2>Savage / Зверь</h2>
+        <span class="status">Завершён</span>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="../images/simi.jpg" alt="Simi / Сими">
+      <div class="book-info">
+        <div class="number">Книга 3</div>
+        <h2>Simi / Сими</h2>
+        <span class="status">Завершён</span>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="../images/sanctify.jpg" alt="Sanctify">
+      <div class="book-info">
+        <div class="number">Книга 4</div>
+        <h2>Sanctify</h2>
+        <span class="status future">2027</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
