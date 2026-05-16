@@ -44,9 +44,8 @@ h1{
 
 .books-grid{
   display:grid;
-  grid-template-columns:repeat(5,180px));
-  gap:18px;
-  justify-content:center;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:30px;
 }
 
 .book-card{
@@ -59,7 +58,7 @@ h1{
 
 .book-card img{
   width:100%;
-  height:270px;
+  height:340px;
   object-fit:cover;
   display:block;
 }
