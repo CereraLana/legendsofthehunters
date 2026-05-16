@@ -1,173 +1,161 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Персонажи</title>
+<title>Персонажи — Легенды об Охотниках</title>
 
 <style>
-
 body{
   margin:0;
-  background:#0b0b12;
-  color:white;
+  background:#080811;
+  color:#f4f0ff;
   font-family:Georgia, serif;
-  padding:40px;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 7%;
+  background:#10101b;
+  border-bottom:1px solid #292941;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+  color:#e8e2ff;
+}
+
+.nav{
+  display:flex;
+  gap:22px;
+}
+
+.nav a{
+  color:#c9c3e8;
+  text-decoration:none;
+  font-size:16px;
+}
+
+.nav a:hover{
+  color:white;
+}
+
+.page{
+  max-width:1100px;
+  margin:0 auto;
+  padding:55px 24px 80px;
+}
+
+.back{
+  color:#aaa3d8;
+  text-decoration:none;
+  font-size:15px;
 }
 
 h1{
   text-align:center;
-  font-size:60px;
-  margin-bottom:60px;
-  color:#d8d8ff;
+  font-size:54px;
+  margin:35px 0 45px;
+  color:#e7e1ff;
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
 }
 
 .card{
-  background:#171722;
-  border:1px solid #2a2a40;
-  border-radius:20px;
-  padding:25px;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-  background:#222233;
+  background:#151521;
+  border:1px solid #2c2c44;
+  border-radius:18px;
+  padding:26px;
 }
 
 .card h2{
   margin-top:0;
-  color:#ffffff;
+  font-size:28px;
 }
 
 .card p{
-  color:#b8b8c9;
+  color:#c8c3d8;
   line-height:1.6;
 }
 
 .button{
   display:inline-block;
-  margin-top:15px;
-  padding:10px 18px;
-  background:#4d4d8f;
+  margin-top:14px;
+  padding:10px 20px;
+  background:#4f4a8f;
   border-radius:10px;
   color:white;
   text-decoration:none;
 }
 
 .button:hover{
-  background:#6666aa;
+  background:#6760b5;
 }
 
-.back{
-  display:inline-block;
-  margin-bottom:40px;
-  color:#aaaaff;
-  text-decoration:none;
-}
+@media(max-width:700px){
+  .header{
+    flex-direction:column;
+    gap:15px;
+  }
 
-.back:hover{
-  color:white;
-}
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:25px 40px;
-  background:#11111c;
-  border-bottom:1px solid #2a2a40;
-}
+  .nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
 
-.logo{
-  font-size:28px;
-  color:#d9d9ff;
-  font-weight:bold;
-}
-
-.nav{
-  display:flex;
-  gap:25px;
-}
-
-.nav a{
-  color:#c6c6dd;
-  text-decoration:none;
-  font-size:18px;
-  transition:0.3s;
-}
-
-.nav a:hover{
-  color:white;
+  h1{
+    font-size:42px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<a class="back" href="../index.html">
-← Главная
-</a>
 <div class="header">
-
-  <div class="logo">
-    Легенды об Охотниках
-  </div>
+  <div class="logo">Легенды об Охотниках</div>
 
   <div class="nav">
-
     <a href="../index.html">Главная</a>
-    <a href="#">Персонажи</a>
+    <a href="./index.html">Персонажи</a>
     <a href="#">Книги</a>
     <a href="#">Хронология</a>
     <a href="#">Мир</a>
-
   </div>
-
 </div>
-<h1>Персонажи</h1>
 
-<div class="grid">
+<div class="page">
 
-  <div class="card">
-    <h2>Ашерон</h2>
+  <a class="back" href="../index.html">← Главная</a>
 
-    <p>
-      Один из самых древних и загадочных Темных Охотников.
-    </p>
+  <h1>Персонажи</h1>
 
-    <a class="button" href="#">
-      Читать
-    </a>
-  </div>
+  <div class="grid">
 
-  <div class="card">
-    <h2>Ник Готье</h2>
+    <div class="card">
+      <h2>Ашерон</h2>
+      <p>Один из самых древних и загадочных Темных Охотников.</p>
+      <a class="button" href="#">Читать</a>
+    </div>
 
-    <p>
-      Главный герой серии Chronicles of Nick.
-    </p>
+    <div class="card">
+      <h2>Ник Готье</h2>
+      <p>Главный герой серии Chronicles of Nick.</p>
+      <a class="button" href="#">Читать</a>
+    </div>
 
-    <a class="button" href="#">
-      Читать
-    </a>
-  </div>
+    <div class="card">
+      <h2>Талон</h2>
+      <p>Кельтский Темный Охотник с трагическим прошлым.</p>
+      <a class="button" href="#">Читать</a>
+    </div>
 
-  <div class="card">
-    <h2>Талон</h2>
-
-    <p>
-      Кельтский Темный Охотник с трагическим прошлым.
-    </p>
-
-    <a class="button" href="#">
-      Читать
-    </a>
   </div>
 
 </div>
