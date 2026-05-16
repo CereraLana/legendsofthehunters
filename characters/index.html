@@ -75,7 +75,36 @@ h1{
 .back:hover{
   color:white;
 }
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 40px;
+  background:#11111c;
+  border-bottom:1px solid #2a2a40;
+}
 
+.logo{
+  font-size:28px;
+  color:#d9d9ff;
+  font-weight:bold;
+}
+
+.nav{
+  display:flex;
+  gap:25px;
+}
+
+.nav a{
+  color:#c6c6dd;
+  text-decoration:none;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  color:white;
+}
 </style>
 </head>
 
@@ -84,7 +113,23 @@ h1{
 <a class="back" href="../index.html">
 ← Главная
 </a>
+<div class="header">
 
+  <div class="logo">
+    Легенды об Охотниках
+  </div>
+
+  <div class="nav">
+
+    <a href="../index.html">Главная</a>
+    <a href="#">Персонажи</a>
+    <a href="#">Книги</a>
+    <a href="#">Хронология</a>
+    <a href="#">Мир</a>
+
+  </div>
+
+</div>
 <h1>Персонажи</h1>
 
 <div class="grid">
