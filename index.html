@@ -1,119 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Легенды об Охотниках</title>
 
 <style>
 
 body{
   margin:0;
-  background:#090912;
-  color:white;
+  background:#050512;
+  color:#f2eaff;
   font-family:Georgia, serif;
 }
 
+.container{
+  width:90%;
+  max-width:1400px;
+  margin:auto;
+}
+
 .hero{
-  padding:80px 40px;
   text-align:center;
+  padding:120px 20px 80px;
 }
 
-h1{
-  font-size:76px;
+.hero h1{
+  font-size:72px;
   margin-bottom:20px;
-  color:#e4deff;
+  color:#efe7ff;
 }
 
-.subtitle{
+.hero p{
+  font-size:28px;
+  color:#cfc7e8;
   max-width:900px;
-  margin:0 auto 70px;
-  font-size:24px;
-  color:#bdb8d8;
-  line-height:1.6;
+  margin:auto;
+  line-height:1.5;
 }
 
 .menu{
   display:flex;
-  gap:20px;
   justify-content:center;
+  gap:20px;
   flex-wrap:wrap;
-  margin-bottom:110px;
+  margin-top:50px;
 }
 
-.card{
-  background:#171722;
-  padding:18px 30px;
-  border-radius:16px;
-  border:1px solid #2f2f45;
-  color:white;
+.menu a{
   text-decoration:none;
-  font-size:20px;
+  color:#f2eaff;
+  background:#171726;
+  padding:18px 34px;
+  border-radius:16px;
+  border:1px solid #2e2e48;
   transition:0.3s;
+  font-size:22px;
 }
 
-.card:hover{
-  background:#27273a;
-  transform:translateY(-4px);
+.menu a:hover{
+  background:#6d5cff;
 }
 
-.series-title{
-  font-size:52px;
-  margin-bottom:60px;
-  color:#ece8ff;
+.section-title{
+  text-align:center;
+  font-size:64px;
+  margin:40px 0 70px;
 }
 
 .series-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(500px,1fr));
-  gap:55px;
-  max-width:1300px;
-  margin:0 auto;
-}
-
-.series-banner{
-  text-decoration:none;
-  transition:0.4s;
-}
-
-.series-banner:hover{
-  transform:translateY(-6px);
+  grid-template-columns:repeat(2, 1fr);
+  gap:40px;
+  margin-bottom:100px;
 }
 
 .series-banner h3{
-  text-align:left;
-  color:#ece8ff;
-  font-size:46px;
+  color:#f2eaff;
+  font-size:42px;
   margin-bottom:18px;
+}
+
+.series-banner a{
+  text-decoration:none;
 }
 
 .series-banner img{
   width:100%;
-  height:160px;
+  height:180px;
   object-fit:cover;
-   object-position:center;
+  object-position:center;
   border-radius:24px;
   border:1px solid #353550;
   box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  transition:0.3s;
 }
 
-@media(max-width:700px){
+.series-banner img:hover{
+  transform:scale(1.02);
+  border-color:#8d7bff;
+}
 
-  h1{
-    font-size:52px;
+@media(max-width:900px){
+
+  .hero{
+    padding:80px 10px 50px;
   }
 
-  .subtitle{
-    font-size:20px;
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:22px;
+  }
+
+  .menu a{
+    font-size:18px;
+    padding:14px 22px;
+  }
+
+  .section-title{
+    font-size:42px;
   }
 
   .series-grid{
     grid-template-columns:1fr;
+    gap:50px;
   }
 
   .series-banner h3{
     font-size:34px;
   }
 
+  .series-banner img{
+    height:140px;
+  }
 }
 
 </style>
@@ -121,76 +145,62 @@ h1{
 
 <body>
 
-<div class="hero">
+<div class="container">
 
-  <h1>Легенды об Охотниках</h1>
+  <section class="hero">
 
-  <div class="subtitle">
-    Энциклопедия мира Темных Охотников,
-    персонажей, книг, хронологии и тайн серии.
-  </div>
+    <h1>Легенды об Охотниках</h1>
 
-  <div class="menu">
+    <p>
+      Энциклопедия мира Темных Охотников,
+      персонажей, книг, хронологии и тайн серии.
+    </p>
 
-    <a class="card" href="characters/">
-      Персонажи
-    </a>
+    <div class="menu">
+      <a href="characters/">Персонажи</a>
+      <a href="#">Книги</a>
+      <a href="#">Хронология</a>
+      <a href="#">Мир</a>
+      <a href="#">Статьи</a>
+    </div>
 
-    <a class="card" href="#">
-      Книги
-    </a>
+  </section>
 
-    <a class="card" href="#">
-      Хронология
-    </a>
-
-    <a class="card" href="#">
-      Мир
-    </a>
-
-    <a class="card" href="#">
-      Статьи
-    </a>
-
-  </div>
-
-  <h2 class="series-title">
-    Серии книг
-  </h2>
+  <h2 class="section-title">Серии книг</h2>
 
   <div class="series-grid">
 
-    <a class="series-banner" href="dark-hunters/">
-
+    <div class="series-banner">
       <h3>Тёмные Охотники</h3>
 
-      <img src="images/deadmans-cross.jpg">
+      <a href="dark-hunters/">
+        <img src="images/dark-hunters.jpg">
+      </a>
+    </div>
 
-    </a>
-
-    <a class="series-banner" href="chronicles-of-nick/">
-
+    <div class="series-banner">
       <h3>Хроники Ника</h3>
 
-      <img src="images/chronicles-nick.jpg">
+      <a href="chronicles-of-nick/">
+        <img src="images/chronicles-nick.jpg">
+      </a>
+    </div>
 
-    </a>
-
-    <a class="series-banner" href="shadows-of-fire/">
-
+    <div class="series-banner">
       <h3>Тени Огня</h3>
 
-      <img src="images/chronicles-nick.jpg">
+      <a href="shadows-of-fire/">
+        <img src="images/shadows-fire.jpg">
+      </a>
+    </div>
 
-    </a>
-
-    <a class="series-banner" href="deadmans-cross/">
-
+    <div class="series-banner">
       <h3>Крест Мертвеца</h3>
 
-      <img src="images/deadmans-cross.jpg">
-
-    </a>
+      <a href="deadmans-cross/">
+        <img src="images/deadmans-cross.jpg">
+      </a>
+    </div>
 
   </div>
 
