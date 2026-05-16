@@ -116,6 +116,41 @@ body{
     height:105px;
   }
 }
+  @media(max-width:700px){
+
+  .menu{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    justify-content:center !important;
+    gap:6px !important;
+    overflow-x:auto;
+    padding-bottom:5px;
+  }
+
+  .menu a{
+    font-size:11px !important;
+    padding:9px 10px !important;
+    white-space:nowrap;
+    flex:none;
+  }
+
+  .series-grid{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:16px !important;
+  }
+
+  .series-banner h3{
+    font-size:19px !important;
+    line-height:1.05;
+    min-height:42px;
+    margin-bottom:8px;
+  }
+
+  .series-banner img{
+    height:90px !important;
+  }
+
+}
 </style>
 </head>
 
