@@ -23,7 +23,7 @@
       padding:40px;
       background:
       linear-gradient(to bottom,
-      rgba(10,10,20,0.9),
+      rgba(10,10,20,0.95),
       rgba(5,5,10,1));
     }
 
@@ -46,6 +46,7 @@
       gap:20px;
       flex-wrap:wrap;
       justify-content:center;
+      margin-bottom:100px;
     }
 
     .card{
@@ -62,6 +63,48 @@
     .card:hover{
       background:#2b2b42;
       transform:translateY(-5px);
+    }
+
+    .series-title{
+      font-size:42px;
+      margin-bottom:40px;
+      color:#ebe7ff;
+    }
+
+    .series-grid{
+      display:flex;
+      gap:25px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .series-card{
+      width:280px;
+      background:#171722;
+      border:1px solid #2d2d44;
+      border-radius:20px;
+      padding:30px;
+      text-decoration:none;
+      transition:0.3s;
+      text-align:left;
+    }
+
+    .series-card:hover{
+      background:#232336;
+      transform:translateY(-6px);
+    }
+
+    .series-card h3{
+      color:white;
+      margin-top:0;
+      margin-bottom:15px;
+      font-size:30px;
+    }
+
+    .series-card p{
+      color:#b8b8c9;
+      line-height:1.6;
+      font-size:18px;
     }
 
   </style>
@@ -98,6 +141,44 @@
 
     <a class="card" href="#">
       Статьи
+    </a>
+
+  </div>
+
+  <h2 class="series-title">
+    Серии книг
+  </h2>
+
+  <div class="series-grid">
+
+    <a class="series-card" href="dark-hunters/">
+
+      <h3>Тёмные Охотники</h3>
+
+      <p>
+        Основная серия и главная хронология мира Темных Охотников.
+      </p>
+
+    </a>
+
+    <a class="series-card" href="chronicles-of-nick/">
+
+      <h3>Хроники Ника</h3>
+
+      <p>
+        История Ника Готье и его пути сквозь мир тьмы и пророчеств.
+      </p>
+
+    </a>
+
+    <a class="series-card" href="shadows-of-fire/">
+
+      <h3>Тени Огня</h3>
+
+      <p>
+        Отдельная серия со своей историей, героями и тайнами.
+      </p>
+
     </a>
 
   </div>
