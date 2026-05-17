@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Темные Охотники — Легенды об Охотниках</title>
+
+<style>
+
+body{
+  margin:0;
+  background:#050512;
+  color:#f2eaff;
+  font-family:Georgia, serif;
+}
+
+.container{
+  width:92%;
+  max-width:1400px;
+  margin:auto;
+  padding:35px 0 80px;
+}
+
+.back{
+  color:#cfc7ff;
+  text-decoration:none;
+  font-size:18px;
+}
+
+h1{
+  font-size:58px;
+  text-align:center;
+  margin:45px 0 15px;
+}
+
+.subtitle{
+  text-align:center;
+  color:#cfc7e8;
+  font-size:22px;
+  line-height:1.5;
+  max-width:900px;
+  margin:0 auto 55px;
+}
+
+.books-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:18px;
+}
+
+.book-card{
+  position:relative;
+  background:#151522;
+  border:1px solid #343454;
+  border-radius:22px;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  box-shadow:0 10px 30px rgba(0,0,0,0.45);
+  transition:0.25s;
+}
+
+.book-card:hover{
+  transform:translateY(-4px);
+  border-color:#7e70ff;
+}
+
+.book-card img{
+  width:100%;
+  height:260px;
+  object-fit:contain;
+  display:block;
+  background:#111;
+}
+
+.book-info{
+  padding:14px;
+}
+
+.number{
+  color:#9f94ff;
+  font-size:15px;
+  line-height:1.45;
+}
+
+.status{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#2f815d;
+  color:white;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:10px;
+  z-index:5;
+}
+
+.future{
+  background:#8a4d2c;
+}
+
+@media(max-width:700px){
+
+  h1{
+    font-size:42px;
+  }
+
+  .subtitle{
+    font-size:18px;
+  }
+
+  .books-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .book-card img{
+    height:220px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a class="back" href="../">← Главная</a>
+
+  <h1>Темные Охотники</h1>
+
+  <div class="subtitle">
+    Основная серия мира Dark Hunters. Книги расположены в хронологическом порядке.
+  </div>
+
+  <div class="books-grid">
+
+    <a class="book-card" href="../book.html?id=the-beginning">
+      <img src="../images/dark-hunters/the-beginning.jpg">
+      <span class="status">ТО</span>
+      <div class="book-info">
+        <div class="number">0.5 Начало — Ашерон</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=fantasy-lover">
+      <img src="../images/dark-hunters/fantasy-lover.jpg">
+      <span class="status">ТО</span>
+      <div class="book-info">
+        <div class="number">0.6 Любовник из фантазий</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=night-pleasures">
+      <img src="../images/dark-hunters/night-pleasures.jpg">
+      <span class="status">ТО</span>
+      <div class="book-info">
+        <div class="number">1 Ночные удовольствия</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=dragonswan">
+      <img src="../images/dark-hunters/dragonswan.jpg">
+      <span class="status">О</span>
+      <div class="book-info">
+        <div class="number">2 Драконица</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=night-embrace">
+      <img src="../images/dark-hunters/night-embrace.jpg">
+      <span class="status">ТО</span>
+      <div class="book-info">
+        <div class="number">3 Темные объятия</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=phantom-lover">
+      <img src="../images/dark-hunters/phantom-lover.jpg">
+      <span class="status">ЛС</span>
+      <div class="book-info">
+        <div class="number">3.5 Призрачный любовник</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=dance-with-the-devil">
+      <img src="../images/dark-hunters/dance-with-the-devil.jpg">
+      <span class="status">ТО</span>
+      <div class="book-info">
+        <div class="number">4 Танец с дьяволом</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=kiss-of-the-night">
+      <img src="../images/dark-hunters/kiss-of-the-night.jpg">
+      <span class="status">ТО</span>
+      <div class="book-info">
+        <div class="number">5 Поцелуй ночи</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=night-play">
+      <img src="../images/dark-hunters/night-play.jpg">
+      <span class="status">О</span>
+      <div class="book-info">
+        <div class="number">6 Ночная игра</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=seize-the-night">
+      <img src="../images/dark-hunters/seize-the-night.jpg">
+      <span class="status">ТО</span>
+      <div class="book-info">
+        <div class="number">7 Поймать ночь</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=sins-of-the-night">
+      <img src="../images/dark-hunters/sins-of-the-night.jpg">
+      <span class="status">ТО</span>
+      <div class="book-info">
+        <div class="number">8 Грехи ночи</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=unleash-the-night">
+      <img src="../images/dark-hunters/unleash-the-night.jpg">
+      <span class="status">О</span>
+      <div class="book-info">
+        <div class="number">9 Спустить ночь с цепи</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=dark-side-of-the-moon">
+      <img src="../images/dark-hunters/dark-side-of-the-moon.jpg">
+      <span class="status">О/ТО</span>
+      <div class="book-info">
+        <div class="number">10 Темная сторона луны</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=acheron">
+      <img src="../images/dark-hunters/acheron.jpg">
+      <span class="status">ТО</span>
+      <div class="book-info">
+        <div class="number">15 Ашерон</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=styxx">
+      <img src="../images/dark-hunters/styxx.jpg">
+      <span class="status">ТО</span>
+      <div class="book-info">
+        <div class="number">23 Стикс</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=dragonbane">
+      <img src="../images/dark-hunters/dragonbane.jpg">
+      <span class="status">О</span>
+      <div class="book-info">
+        <div class="number">25 Клеймо дракона</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=dragonmark">
+      <img src="../images/dark-hunters/dragonmark.jpg">
+      <span class="status">О</span>
+      <div class="book-info">
+        <div class="number">26 Метка дракона</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=dragonsworn">
+      <img src="../images/dark-hunters/dragonsworn.jpg">
+      <span class="status">О</span>
+      <div class="book-info">
+        <div class="number">27 Клятва дракона</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=stygian">
+      <img src="../images/dark-hunters/stygian.jpg">
+      <span class="status">О</span>
+      <div class="book-info">
+        <div class="number">28 Стигиец</div>
+      </div>
+    </a>
+
+    <a class="book-card" href="../book.html?id=queen-of-all-shadows">
+      <img src="../images/dark-hunters/queen-of-all-shadows.jpg">
+      <span class="status future">Анонс</span>
+      <div class="book-info">
+        <div class="number">30 Queen of All Shadows</div>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+
+</body>
+</html>
