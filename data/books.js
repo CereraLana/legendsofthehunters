@@ -14,8 +14,7 @@ const books = [
     number: "1.5",
     cover: "images/shadows-of-fire/last-christmas.jpg",
     characters: ["caleb", "lilliana"]
-  }
-];
+  },
 {
   id: "night-pleasures",
   title: "Ночные удовольствия",
@@ -41,6 +40,9 @@ const books = [
   cover: "images/dark-hunters/dance-with-the-devil.jpg",
 
   description: "Зарек и Астрид.",
+  
+];
+
 
   characters: [
     "zarek",
