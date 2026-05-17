@@ -2,7 +2,7 @@ const characters = [
   {
     id: "nick-gautier",
     name: "Ник Готье",
-    image: "images/characters/nick-gautier.jpg",
+    image: "images/characters/caleb.jpg",
     description: "Описание персонажа."
   },
   {
