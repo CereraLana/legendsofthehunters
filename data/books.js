@@ -40,13 +40,13 @@ const books = [
   cover: "images/dark-hunters/dance-with-the-devil.jpg",
 
   description: "Зарек и Астрид.",
-  
-];
-
-
-  characters: [
+   characters: [
     "zarek",
     "astrid",
     "asheron"
   ]
 },
+];
+
+
+ 
