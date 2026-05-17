@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Книга</title>
+
+  <style>
+    body{
+      margin:0;
+      padding:40px;
+      background:#0b0b16;
+      color:white;
+      font-family:Georgia, serif;
+    }
+
+    .book-page{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .top{
+      display:flex;
+      gap:40px;
+      flex-wrap:wrap;
+    }
+
+    .cover{
+      width:320px;
+      border-radius:20px;
+      overflow:hidden;
+    }
+
+    .cover img{
+      width:100%;
+      display:block;
+    }
+
+    .info{
+      flex:1;
+      min-width:300px;
+    }
+
+    h1{
+      font-size:54px;
+      margin-top:0;
+    }
+
+    .description{
+      font-size:20px;
+      line-height:1.7;
+      color:#d7d7e7;
+    }
+
+    .characters{
+      margin-top:60px;
+    }
+
+    .characters-grid{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .character-card{
+      width:140px;
+      text-align:center;
+    }
+
+    .character-card img{
+      width:140px;
+      height:140px;
+      object-fit:cover;
+      border-radius:50%;
+    }
+
+    .character-name{
+      margin-top:10px;
+      font-size:18px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="book-page">
+
+  <div class="top">
+
+    <div class="cover">
+      <img src="images/diversion.jpg">
+    </div>
+
+    <div class="info">
+
+      <h1>Диверсия</h1>
+
+      <div class="description">
+        Здесь будет описание книги.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="characters">
+
+    <h2>Персонажи</h2>
+
+    <div class="characters-grid">
+
+      <div class="character-card">
+        <img src="images/characters/simi.jpg">
+        <div class="character-name">Сими</div>
+      </div>
+
+      <div class="character-card">
+        <img src="images/characters/caleb.jpg">
+        <div class="character-name">Калеб</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
