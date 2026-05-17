@@ -1,129 +1,201 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Книга</title>
 
-  <title>Книга</title>
+<style>
+body{
+  margin:0;
+  background:#070714;
+  color:#f2eaff;
+  font-family:Georgia, serif;
+}
 
-  <style>
-    body{
-      margin:0;
-      padding:40px;
-      background:#0b0b16;
-      color:white;
-      font-family:Georgia, serif;
-    }
+.page{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+  padding:35px 0 80px;
+}
 
-    .book-page{
-      max-width:1200px;
-      margin:auto;
-    }
+.back{
+  color:#cfc7ff;
+  text-decoration:none;
+  font-size:18px;
+}
 
-    .top{
-      display:flex;
-      gap:40px;
-      flex-wrap:wrap;
-    }
+.book-top{
+  display:flex;
+  gap:35px;
+  margin-top:45px;
+  align-items:flex-start;
+}
 
-    .cover{
-      width:320px;
-      border-radius:20px;
-      overflow:hidden;
-    }
+.cover{
+  width:260px;
+  border-radius:22px;
+  overflow:hidden;
+  background:#151522;
+  border:1px solid #343454;
+}
 
-    .cover img{
-      width:100%;
-      display:block;
-    }
+.cover img{
+  width:100%;
+  display:block;
+}
 
-    .info{
-      flex:1;
-      min-width:300px;
-    }
+.info{
+  flex:1;
+}
 
-    h1{
-      font-size:54px;
-      margin-top:0;
-    }
+h1{
+  font-size:54px;
+  margin:0 0 15px;
+}
 
-    .description{
-      font-size:20px;
-      line-height:1.7;
-      color:#d7d7e7;
-    }
+.meta{
+  color:#bdb5df;
+  font-size:20px;
+  margin-bottom:18px;
+}
 
-    .characters{
-      margin-top:60px;
-    }
+.description{
+  font-size:20px;
+  line-height:1.6;
+  color:#d7d2e8;
+}
 
-    .characters-grid{
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-    }
+.characters{
+  margin-top:60px;
+}
 
-    .character-card{
-      width:140px;
-      text-align:center;
-    }
+.characters h2{
+  font-size:38px;
+  margin-bottom:25px;
+}
 
-    .character-card img{
-      width:140px;
-      height:140px;
-      object-fit:cover;
-      border-radius:50%;
-    }
+.characters-grid{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+}
 
-    .character-name{
-      margin-top:10px;
-      font-size:18px;
-    }
-  </style>
+.character-card{
+  width:130px;
+  text-align:center;
+  color:#f2eaff;
+  text-decoration:none;
+}
+
+.character-card img{
+  width:130px;
+  height:130px;
+  object-fit:cover;
+  border-radius:50%;
+  background:#151522;
+  border:1px solid #343454;
+}
+
+.character-name{
+  margin-top:10px;
+  font-size:18px;
+}
+
+@media(max-width:700px){
+  .book-top{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  h1{
+    font-size:44px;
+    text-align:center;
+  }
+
+  .meta,
+  .description{
+    text-align:center;
+  }
+
+  .cover{
+    width:240px;
+  }
+
+  .characters h2{
+    font-size:34px;
+  }
+
+  .characters-grid{
+    justify-content:center;
+  }
+}
+</style>
 </head>
+
 <body>
 
-<div class="book-page">
+<div class="page">
 
-  <div class="top">
+  <a class="back" href="./">← Главная</a>
+
+  <div class="book-top">
 
     <div class="cover">
-      <img src="images/diversion.jpg">
+      <img id="book-cover" src="">
     </div>
 
     <div class="info">
-
-      <h1>Диверсия</h1>
-
-      <div class="description">
-        Здесь будет описание книги.
-      </div>
-
+      <h1 id="book-title"></h1>
+      <div class="meta" id="book-meta"></div>
+      <div class="description" id="book-description"></div>
     </div>
 
   </div>
 
   <div class="characters">
-
     <h2>Персонажи</h2>
-
-    <div class="characters-grid">
-
-      <div class="character-card">
-        <img src="images/characters/simi.jpg">
-        <div class="character-name">Сими</div>
-      </div>
-
-      <div class="character-card">
-        <img src="images/characters/caleb.jpg">
-        <div class="character-name">Калеб</div>
-      </div>
-
-    </div>
-
+    <div class="characters-grid" id="characters-grid"></div>
   </div>
 
 </div>
+
+<script src="./data/books.js"></script>
+<script src="./data/characters.js"></script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const bookId = params.get("id");
+
+const book = books.find(b => b.id === bookId);
+
+if (!book) {
+  document.body.innerHTML = "<h1 style='color:white;padding:40px'>Книга не найдена</h1>";
+} else {
+  document.title = book.title;
+
+  document.getElementById("book-title").textContent = book.title;
+  document.getElementById("book-cover").src = book.cover;
+  document.getElementById("book-meta").textContent = `${book.series} • Книга ${book.number}`;
+  document.getElementById("book-description").textContent = book.description || "Описание книги будет добавлено позже.";
+
+  const grid = document.getElementById("characters-grid");
+
+  book.characters.forEach(characterId => {
+    const character = characters.find(c => c.id === characterId);
+
+    if (character) {
+      grid.innerHTML += `
+        <a class="character-card" href="character.html?id=${character.id}">
+          <img src="${character.image}" alt="${character.name}">
+          <div class="character-name">${character.name}</div>
+        </a>
+      `;
+    }
+  });
+}
+</script>
 
 </body>
 </html>
