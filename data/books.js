@@ -4,7 +4,7 @@ const books = [
     title: "Диверсия",
     series: "Тени Огня",
     number: "1",
-    cover: "images/diversion.jpg",
+    cover: "images/shadows-of-fire/diversion.jpg",
     characters: ["nick-gautier", "caleb", "simi"]
   },
   {
@@ -12,7 +12,7 @@ const books = [
     title: "Последнее Рождество",
     series: "Тени Огня",
     number: "1.5",
-    cover: "images/last-christmas.jpg",
+    cover: "images/shadows-of-fire/last-christmas.jpg",
     characters: ["caleb", "lilliana"]
   }
 ];
