@@ -67,7 +67,7 @@ h1{
   margin:35px 0 50px;
 }
 
-..characters-grid{
+.characters-grid{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
@@ -98,7 +98,7 @@ h1{
 
 .character-card h2{
   font-size:28px;
-  margin:0 0 10px;
+  margin:0;
 }
 
 .character-card p{
@@ -107,31 +107,6 @@ h1{
 
 .button{
   display:none;
-}
-  
-.character-card:hover{
-  transform:translateY(-4px);
-  border-color:#7d6dff;
-}
-  
-.character-card h2{
-  margin:0 0 12px;
-  font-size:32px;
-}
-
-.character-card p{
-  color:#d1cae8;
-  line-height:1.6;
-  margin-bottom:22px;
-}
-
-.button{
-  display:inline-block;
-  background:#6f63d9;
-  color:white;
-  padding:10px 18px;
-  border-radius:12px;
-  font-size:16px;
 }
 
 @media(max-width:800px){
@@ -152,7 +127,20 @@ h1{
   }
 
   .characters-grid{
-    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .character-card{
+    width:160px;
+  }
+
+  .character-card img{
+    width:160px;
+    height:160px;
+  }
+
+  .character-card h2{
+    font-size:22px;
   }
 }
 
@@ -208,12 +196,6 @@ characters.forEach(character => {
            alt="${character.name}">
 
       <h2>${character.name}</h2>
-
-      <p>
-        ${character.description || "Описание будет добавлено позже."}
-      </p>
-
-      <span class="button">Читать</span>
 
     </a>
 
