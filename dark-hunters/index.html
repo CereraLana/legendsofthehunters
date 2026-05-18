@@ -58,12 +58,17 @@ h1{
   margin:0 auto 55px;
 }
 
-.books-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:10px;
-}
 
+  .books-grid{
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+  }
+
+  .book-card img{
+  height:260px;
+  object-fit:cover;
+  object-position:center 35%;
+}
 .book-card{
   position:relative;
   background:#151522;
@@ -76,13 +81,7 @@ color:inherit;
 display:block;
 }
 
-.book-card img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
-  object-position:center top;
-  display:block;
-}
+
 
 .book-info{
   padding:20px;
