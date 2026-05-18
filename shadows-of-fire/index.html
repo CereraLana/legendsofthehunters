@@ -60,8 +60,15 @@ h1{
 
 .books-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+  grid-template-columns:repeat(5,1fr);
   gap:10px;
+}
+.book-card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
 }
 
 .book-card{
@@ -74,14 +81,6 @@ h1{
   text-decoration:none;
 color:inherit;
 display:block;
-}
-
-.book-card img{
-  width:100%;
-  height:250px;
-  object-fit:contain;
-  display:block;
-
 }
 
 .book-info{
