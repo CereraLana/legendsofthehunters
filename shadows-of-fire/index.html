@@ -13,7 +13,23 @@ body{
   color:#f2eaff;
   font-family:Georgia, serif;
 }
+.menu{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:15px;
+}
 
+.menu a{
+  text-decoration:none;
+  color:#f2eaff;
+  background:#171726;
+  padding:12px 22px;
+  border-radius:14px;
+  border:1px solid #2e2e48;
+  font-size:18px;
+}
 .container{
   width:92%;
   max-width:1200px;
@@ -109,7 +125,15 @@ display:block;
   h1{
     font-size:42px;
   }
+  .menu{
+    gap:10px;
+    margin-top:30px;
+  }
 
+  .menu a{
+    font-size:15px;
+    padding:10px 16px;
+  }
   .subtitle{
     font-size:18px;
   }
@@ -141,7 +165,25 @@ display:block;
 <div class="container">
 
   <a class="back" href="../">← Главная</a>
+<div class="container">
 
+  <section class="hero">
+    <h1>Легенды об Охотниках</h1>
+
+    <p>
+      Энциклопедия мира Темных Охотников,
+      персонажей, книг, хронологии и тайн серии.
+    </p>
+
+    <div class="menu">
+      <a href="characters/">Персонажи</a>
+      <a href="#">Книги</a>
+      <a href="#">Хронология</a>
+      <a href="#">Мир</a>
+      <a href="#">Статьи</a>
+    </div>
+  </section>
+</div>
   <h1>Тени Огня</h1>
 
   <div class="subtitle">
