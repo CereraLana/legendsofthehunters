@@ -13,7 +13,7 @@ const books = [
     series: "Тени Огня",
     number: "1.5",
     cover: "images/shadows-of-fire/last-christmas.jpg",
-    description: "ССезон оизни которого ― уей, но в конечном итоге, отрицать своих чувств он не в силах. Калеб убирает меч, дабы провести вечность в мире людей.",
+    description: "Калеб",
     characters: ["caleb", "lilliana"]
   },
 {
