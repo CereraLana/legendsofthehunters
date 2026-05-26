@@ -270,6 +270,7 @@ if (!book) {
   document.getElementById("book-title").textContent = book.title;
   document.getElementById("book-cover").src = book.cover;
   document.getElementById("book-meta").textContent = `${book.series} • Книга ${book.number}`;
+  document.getElementById("book-subseries").textContent = book.subseries || "";
   document.getElementById("book-description").textContent =
     book.description || "Описание книги будет добавлено позже.";
 
