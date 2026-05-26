@@ -271,8 +271,7 @@ if (!book) {
   document.getElementById("book-title").textContent = book.title;
   document.getElementById("book-cover").src = book.cover;
   document.getElementById("book-meta").textContent = `${book.series} • Книга ${book.number}`;
-  document.getElementById("book-description").innerHTML =
-  (book.description || "Описание книги будет добавлено позже.").replace(/\n/g, "<br><br>");
+ document.getElementById("book-description").textContent = book.description || "Описание книги будет добавлено позже.";
 
   const grid = document.getElementById("characters-grid");
 
