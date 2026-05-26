@@ -180,14 +180,19 @@ h1{
 }
 
 h1{
-  font-size:30px;
+  font-size:clamp(22px, 7vw, 30px);
+  line-height:1.1;
   margin:0 0 10px;
   text-align:left;
-  position:static;
+  overflow-wrap:break-word;
 }
 .info{
   flex:1;
   min-width:0;
+}
+
+body{
+  overflow-x:hidden;
 }
 .cover{
   width:150px !important;
