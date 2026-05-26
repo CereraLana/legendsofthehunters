@@ -4,6 +4,7 @@ const books = [
     title: "Диверсия",
     series: "Тени Огня",
     number: "1",
+    subseries: "Спин-офф серии «Хроники Ника»",
     cover: "images/shadows-of-fire/diversion.jpg",
     characters: ["nick-gautier", "caleb", "simi"]
   },
