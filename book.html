@@ -174,9 +174,9 @@ h1{
 
 .book-top{
   display:flex;
+  flex-wrap:nowrap;
   gap:20px;
   align-items:flex-start;
-  margin-top:10px;
 }
 
 h1{
@@ -185,7 +185,10 @@ h1{
   text-align:left;
   position:static;
 }
-
+.info{
+  flex:1;
+  min-width:0;
+}
 .cover{
   width:150px !important;
   flex:0 0 150px;
