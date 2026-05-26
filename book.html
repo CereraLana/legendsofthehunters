@@ -20,17 +20,11 @@ body{
   padding:15px 0 80px;
 }
 
-.back{
-  color:#cfc7ff;
-  text-decoration:none;
-  font-size:18px;
-}
-
 .book-top{
   display:flex;
   gap:35px;
-  margin-top:45px;
   align-items:flex-start;
+  flex-wrap:wrap;
 }
 
 .cover{
@@ -48,11 +42,14 @@ body{
 
 .info{
   flex:1;
+  padding-top:20px;
 }
 
 h1{
+  width:100%;
   font-size:54px;
-  margin:0 0 15px;
+  text-align:center;
+  margin:0 0 25px;
 }
 
 .meta{
@@ -65,7 +62,8 @@ h1{
   font-size:20px;
   line-height:1.6;
   color:#d7d2e8;
-  white-space: pre-line;
+  white-space:pre-line;
+  margin-top:30px;
 }
 
 .characters{
@@ -103,6 +101,7 @@ h1{
   margin-top:10px;
   font-size:18px;
 }
+
 .menu{
   display:flex;
   justify-content:center;
@@ -116,7 +115,7 @@ h1{
   color:#f2eaff;
   background:#171726;
   padding:12px 18px;
- border-radius:14px;
+  border-radius:14px;
   border:1px solid #2e2e48;
   font-size:18px;
 }
@@ -134,10 +133,9 @@ h1{
   display:block;
   border:1px solid #2b2b45;
 }
+
 @media(max-width:700px){
- .book-top{
-  gap:20px;
-}
+
 .top-banner{
   width:100%;
   max-width:100%;
@@ -151,9 +149,6 @@ h1{
 }
 
 .menu{
-  margin-top:0 !important;
-}
-.menu{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
   gap:8px;
@@ -166,18 +161,17 @@ h1{
   align-items:center;
   justify-content:center;
   min-height:33px;
-  color:#f2eaff;
-  text-decoration:none;
-  background:#171726;
-  border:1px solid #343454;
-  border-radius:14px;
   font-size:16px;
   text-align:center;
 }
+
 .book-top{
   position:relative;
-  padding-top:75px;
-  margin-top:10px;
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+  padding-top:60px;
+  margin-top:0;
 }
 
 h1{
@@ -190,6 +184,11 @@ h1{
   margin:0;
 }
 
+.cover{
+  width:200px !important;
+  flex:0 0 200px;
+}
+
 .meta{
   font-size:18px;
 }
@@ -197,58 +196,53 @@ h1{
 .description{
   font-size:18px;
   line-height:1.6;
-  white-space: pre-line;
+  margin-top:20px;
 }
 
-  .cover{
-  width:220px !important;
+.characters-grid{
+  justify-content:center;
 }
-
-.cover img{
-  width:100%;
-  display:block;
-}
-
-  .characters-grid{
-    justify-content:center;
-  }
 }
 </style>
 </head>
 
 <body>
+
 <div class="top-banner">
   <img src="images/banner.jpg" alt="Легенды об Охотниках">
 </div>
-  <section class="hero">
 
-    <div class="menu">
-      <a href="./">Главная</a>
-      <a href="../characters/">Персонажи</a>
-      <a href="#">Книги</a>
-      <a href="#">Хронология</a>
-      <a href="#">Глоссарий</a>
-      <a href="#">Блог</a>
-    </div>
-  </section>
+<section class="hero">
+  <div class="menu">
+    <a href="./">Главная</a>
+    <a href="../characters/">Персонажи</a>
+    <a href="#">Книги</a>
+    <a href="#">Хронология</a>
+    <a href="#">Глоссарий</a>
+    <a href="#">Блог</a>
+  </div>
+</section>
+
 <div class="page">
 
   <div class="book-top">
+
+    <h1 id="book-title"></h1>
 
     <div class="cover">
       <img id="book-cover" src="">
     </div>
 
     <div class="info">
-      <h1 id="book-title"></h1>
       <div class="meta" id="book-meta"></div>
-      <div class="description" id="book-description"></div>
     </div>
 
   </div>
 
+  <div class="description" id="book-description"></div>
+
   <div class="characters">
-    <h2>Персонажи1</h2>
+    <h2>Персонажи</h2>
     <div class="characters-grid" id="characters-grid"></div>
   </div>
 
@@ -271,7 +265,8 @@ if (!book) {
   document.getElementById("book-title").textContent = book.title;
   document.getElementById("book-cover").src = book.cover;
   document.getElementById("book-meta").textContent = `${book.series} • Книга ${book.number}`;
- document.getElementById("book-description").textContent = book.description || "Описание книги будет добавлено позже.";
+  document.getElementById("book-description").textContent =
+    book.description || "Описание книги будет добавлено позже.";
 
   const grid = document.getElementById("characters-grid");
 
