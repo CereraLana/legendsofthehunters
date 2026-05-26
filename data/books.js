@@ -10,9 +10,10 @@ const books = [
 { 
   id: "last-christmas", 
  title: "Последнее Рождество", 
+  cover: "images/shadows-of-fire/last-christmas.jpg",
  series: "Тени Огня", 
   number: "1.5", 
-  cover: "images/shadows-of-fire/last-christmas.jpg", 
+  subseries: "Спин-офф серии «Хроники Ника»",
   description: `Сезон отпусков всегда интересен, когда живёшь в мире с паранормальными существами. Как демон даэв, Калеб Малфас никогда по-настоящему не понимал, откуда у людей такое желание что-то праздновать.
 
 До того дня, когда смертная спасла ему жизнь.
