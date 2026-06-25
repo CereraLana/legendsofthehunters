@@ -9,7 +9,7 @@ const characters = [
     id: "caleb",
     name: "Калеб",
     image: "images/characters/caleb.jpg",
-    description: "Описание персонажа."
+    description: "Описание персонажа.1111"
   },
   {
     id: "simi",
