@@ -2,96 +2,218 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Персонаж</title>
 
 <style>
 body{
-    background:#070714;
-    color:white;
-    font-family:Georgia;
-    margin:0;
-    padding:40px;
+  background:#070714;
+  color:#f2eaff;
+  font-family:Georgia, serif;
+  margin:0;
+}
+
+.top-banner{
+  width:100%;
+  margin:20px auto 6px !important;
+}
+
+.top-banner img{
+  width:100%;
+  max-height:220px;
+  object-fit:cover;
+  border-radius:24px;
+  display:block;
+  border:1px solid #2b2b45;
+}
+
+.menu{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:5px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:#f2eaff;
+  background:#171726;
+  padding:12px 18px;
+  border-radius:14px;
+  border:1px solid #2e2e48;
+  font-size:18px;
 }
 
 .character-page{
-    max-width:1200px;
-    margin:auto;
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  padding:40px 0 80px;
 }
 
 .character-top{
-    display:flex;
-    gap:40px;
-    align-items:flex-start;
-    flex-wrap:wrap;
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  flex-wrap:wrap;
 }
 
 .character-top img{
-    width:280px;
-    border-radius:20px;
+  width:280px;
+  border-radius:20px;
 }
 
 .character-info{
-    flex:1;
+  flex:1;
 }
 
 h1{
-    font-size:54px;
-    margin-top:0;
+  font-size:54px;
+  margin-top:0;
 }
 
 .description{
-    font-size:22px;
-    line-height:1.7;
-    color:#d7d7e7;
+  font-size:22px;
+  line-height:1.7;
+  color:#d7d7e7;
+  white-space:pre-line;
 }
 
 .books{
-    margin-top:60px;
+  margin-top:60px;
+}
+
+.books h2{
+  font-size:38px;
 }
 
 .books-grid{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 .book-card{
-    width:180px;
+  width:180px;
+  color:#f2eaff;
+  text-decoration:none;
 }
 
 .book-card img{
-    width:100%;
-    border-radius:16px;
+  width:100%;
+  border-radius:16px;
 }
 
 .book-title{
-    margin-top:10px;
-    font-size:20px;
+  margin-top:10px;
+  font-size:20px;
+}
+
+@media(max-width:700px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  .top-banner{
+    width:100%;
+    max-width:100%;
+    margin-bottom:6px !important;
+    overflow:hidden;
+  }
+
+  .top-banner img{
+    width:100%;
+    display:block;
+  }
+
+  .menu{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:8px;
+    width:92%;
+    margin:10px auto 0;
+  }
+
+  .menu a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:33px;
+    font-size:16px;
+    text-align:center;
+  }
+
+  .character-page{
+    width:90%;
+    padding:30px 0 70px;
+  }
+
+  .character-top{
+    gap:20px;
+  }
+
+  .character-top img{
+    width:170px;
+  }
+
+  h1{
+    font-size:clamp(24px, 7vw, 34px);
+    line-height:1.1;
+    margin:0 0 12px;
+  }
+
+  .description{
+    font-size:18px;
+    line-height:1.6;
+  }
+
+  .books-grid{
+    justify-content:center;
+  }
+
+  .book-card{
+    width:150px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<div class="top-banner">
+  <img src="images/banner.jpg" alt="Легенды об Охотниках">
+</div>
+
+<section class="hero">
+  <div class="menu">
+    <a href="./">Главная</a>
+    <a href="./characters/">Персонажи</a>
+    <a href="#">Книги</a>
+    <a href="#">Хронология</a>
+    <a href="#">Глоссарий</a>
+    <a href="#">Блог</a>
+  </div>
+</section>
+
 <div class="character-page">
 
-<div class="character-top">
+  <div class="character-top">
 
-<img id="character-image" src="">
+    <img id="character-image" src="">
 
-<div class="character-info">
-<h1 id="character-name"></h1>
+    <div class="character-info">
+      <h1 id="character-name"></h1>
+      <div class="description" id="character-description"></div>
+    </div>
 
-<div class="description" id="character-description"></div>
-</div>
+  </div>
 
-</div>
-
-<div class="books">
-<h2>Книги</h2>
-
-<div class="books-grid" id="books-grid"></div>
-</div>
+  <div class="books">
+    <h2>Книги</h2>
+    <div class="books-grid" id="books-grid"></div>
+  </div>
 
 </div>
 
@@ -99,38 +221,33 @@ h1{
 <script src="./data/characters.js"></script>
 
 <script>
-
 const params = new URLSearchParams(window.location.search);
 const characterId = params.get("id");
 
 const character = characters.find(c => c.id === characterId);
 
 document.getElementById("character-name").textContent = character.name;
-document.getElementById("character-description").textContent = character.description;
+document.getElementById("character-description").textContent = character.description || "Описание персонажа будет добавлено позже.";
 document.getElementById("character-image").src = character.image;
 
 const booksGrid = document.getElementById("books-grid");
 
 const characterBooks = books.filter(book =>
-    book.characters.includes(character.id)
+  book.characters.includes(character.id)
 );
 
 characterBooks.forEach(book => {
 
-booksGrid.innerHTML += `
-<a href="book.html?id=${book.id}" class="book-card">
-
-<img src="${book.cover}">
-
-<div class="book-title">
-${book.title}
-</div>
-
-</a>
-`;
+  booksGrid.innerHTML += `
+    <a href="book.html?id=${book.id}" class="book-card">
+      <img src="${book.cover}">
+      <div class="book-title">
+        ${book.title}
+      </div>
+    </a>
+  `;
 
 });
-
 </script>
 
 </body>
