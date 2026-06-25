@@ -3,7 +3,7 @@ const characters = [
     id: "nick-gautier",
     name: "Ник Готье",
     image: "images/characters/simi.jpg",
-    description: "Описание 1"
+    description: "Описание 11"
   },
   {
     id: "caleb",
